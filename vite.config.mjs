@@ -44,7 +44,7 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue',
-        'vue-router',
+        // 'vue-router',
         {
           'vue-router/auto': ['useRoute', 'useRouter'],
         },
