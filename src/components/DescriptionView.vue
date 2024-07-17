@@ -18,7 +18,7 @@
       <v-col cols="12" md="4" class="text-center mb-4">
         <v-img src="/assets/oven-logo.jpeg" height="100" class="mb-4 mx-auto" />
         <h2>Baked with Love</h2>
-        <p>Twice honored as Bakery of the Year</p>
+        <p>Feel the warmth of our oven-baked creations</p>
       </v-col>
 
       <v-divider vertical></v-divider>
@@ -31,7 +31,7 @@
           class="mb-4 mx-auto"
         />
         <h2>Top quality Flour</h2>
-        <p>Twice honored as Bakery of the Year</p>
+        <p>Crafted with premium flour for exceptional taste</p>
       </v-col>
     </v-row>
   </v-card>

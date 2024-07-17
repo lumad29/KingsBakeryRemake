@@ -21,10 +21,13 @@ function goBack() {
   <div class="background-grey">
     <v-img :src="selectedProduct.pageImg" height="400" cover max-height="320">
       <div class="fill-height d-flex align-center justify-center text-white">
-        <v-btn @click="goBack" color="primary" dark>Go Back</v-btn>
+        <v-icon @click="goBack" class="pa-6" size="large">
+          mdi-arrow-left-drop-circle
+        </v-icon>
         <h1>{{ selectedProduct.name }}</h1>
       </div>
     </v-img>
+
     <v-container class="d-flex">
       <v-row class="my-5">
         <v-col
@@ -33,7 +36,7 @@ function goBack() {
           cols="12"
           lg="6"
         >
-          <v-card class="mx-auto bg-grey" width="90%" min-height="540">
+          <v-card class="mx-auto bg-grey" width="90%" min-height="570">
             <v-img height="400" :src="product.img" cover></v-img>
             <v-card-title class="custom-title">
               {{ product.name }}

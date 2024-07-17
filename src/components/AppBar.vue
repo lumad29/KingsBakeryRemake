@@ -5,10 +5,10 @@ const drawer = ref(false);
 
 const links = [
   { to: '#target-homex', text: 'Home' },
-  { to: 'StoresView.vue', text: 'Stores' },
-  { to: '#target-products', text: 'products' },
+  { to: 'stores', text: 'Stores' },
+  { to: '#target-products', text: 'Our Cafe' },
   { to: '#target-about', text: 'About' },
-  { to: '#target-work', text: 'Work with us' },
+  { to: '#target-contact', text: 'Contact' },
 ];
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
