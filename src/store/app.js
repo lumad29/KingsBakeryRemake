@@ -17,7 +17,6 @@ export const useAppStore = defineStore('app', {
           { id: 7, name: 'Pretzel', price: 3, inStock: true, img: '/assets/products/pretzel-bread.jpg', description: 'A beloved snack, is known for its twisted shape and chewy texture, offering a delightful combination of savory and slight sweetness', hello: 'hello Pretzel', /*ingredients: ['huevo', 'sal']*/ },
           { id: 8, name: 'Hamburger', price: 3, inStock: true, img: '/assets/products/hamburger-bread.jpg', description: 'With a soft texture and sturdy build, it perfectly complements the savory flavors of a delicious burger', hello: 'hello hamburger', /*ingredients: ['huevo', 'sal']*/ },
           { id: 9, name: 'White Bread', price: 3, inStock: true, img: '/assets/products/white-bread.jpg', description: 'Known for its soft, fluffy texture and mild taste, serves as a versatile staple for sandwiches and morning toasts', hello: 'hello white bread', /*ingredients: ['huevo', 'sal']*/ }
-
         ],
         pageImg: '/assets/flour.jpeg',
         src: '/assets/bread-group.jpg',
@@ -33,6 +32,7 @@ export const useAppStore = defineStore('app', {
             , description: 'this is a chocolate cupcake'
           }
         ],
+        pageImg: '/assets/flour.jpeg',
         src: '/assets/croissant.jpg',
         text: 'Step into our bakery wonderland, where each pastry brings a little piece of joy. Whether you adore flaky croissants, filled danishes, or warm cinnamon rolls, our menu offers something to satisfy every craving'
       },

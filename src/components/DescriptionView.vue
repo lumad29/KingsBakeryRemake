@@ -1,37 +1,51 @@
+<script setup>
+import { useDisplay } from 'vuetify';
+
+const { smAndDown } = useDisplay();
+// useAlgo => composables. todos los composables son funciones!
+
+const descriptionItems = [
+  {
+    title: 'Award-Winner',
+    subtitle: 'Twice honored as Bakery of the Year',
+    img: '/assets/award-logo.jpeg',
+  },
+  {
+    title: 'Baked with Love',
+    subtitle: 'Feel the warmth of our oven-baked creations',
+    img: '/public/assets/oven-logo.jpeg',
+  },
+  {
+    title: 'Top quality Flour',
+    subtitle: 'Crafted with premium flour for exceptional tast',
+    img: '/public/assets/flour-logo.jpeg',
+  },
+];
+</script>
 <template>
-  <v-card color="#37474F" class="rounded-0 py-16 px-6" flat>
+  <v-card color="#37474F" class="rounded-0 py-16" flat>
     <v-row align="center" justify="center">
       <!-- First Column -->
-      <v-col cols="12" md="4" class="text-center mb-4">
-        <v-img
-          src="/assets/award-logo.jpeg"
-          height="100"
-          class="mb-4 mx-auto"
-        />
-        <h2>Award-Winner</h2>
-        <p>Twice honored as Bakery of the Year</p>
-      </v-col>
-
-      <v-divider vertical></v-divider>
-
-      <!-- Second Column -->
-      <v-col cols="12" md="4" class="text-center mb-4">
-        <v-img src="/assets/oven-logo.jpeg" height="100" class="mb-4 mx-auto" />
-        <h2>Baked with Love</h2>
-        <p>Feel the warmth of our oven-baked creations</p>
-      </v-col>
-
-      <v-divider vertical></v-divider>
-
-      <!-- Third Column -->
-      <v-col cols="12" md="4" class="text-center mb-4">
-        <v-img
-          src="/assets/flour-logo.jpeg"
-          height="100"
-          class="mb-4 mx-auto"
-        />
-        <h2>Top quality Flour</h2>
-        <p>Crafted with premium flour for exceptional taste</p>
+      <v-col
+        cols="12"
+        md="4"
+        class="text-center mb-4 border-surface-light border-opacity-100"
+        :class="
+          index !== descriptionItems.length - 1 && smAndDown
+            ? 'border-b'
+            : 'border-e'
+        "
+        v-for="(item, index) in descriptionItems"
+        :key="item.title"
+      >
+        <div class="bg-yellowx pa-2 d-flex justify-center">
+          <div class="bg-bluex pa-2">
+            <v-img :src="item.img" height="100" class="mb-4 mx-auto" />
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.subtitle }}</p>
+            <!-- <p>{{ index === descriptionItems.length - 1 }}</p> -->
+          </div>
+        </div>
       </v-col>
     </v-row>
   </v-card>

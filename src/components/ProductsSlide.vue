@@ -27,13 +27,17 @@ const selectedProductId = computed(() => {
 </script>
 
 <template>
-  <v-card color="#37474F" rounded="0" class="pt-16" flat>
+  <v-card color="#37474F" rounded="0" flat class="pb-2">
     <v-sheet
       class="mx-auto mt-18"
       elevation="0"
       max-width="1000"
       color="#37474F"
     >
+      <div class="pt-16">
+        <v-img src="/assets/our-products.jpeg" />
+      </div>
+
       <ProductsSlideSlider v-model="activeProductModel" :products />
 
       <v-expand-transition>

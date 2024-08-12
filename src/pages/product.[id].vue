@@ -68,6 +68,7 @@ function goBack() {
 }
 
 .custom-subtitle {
-  font-size: 17px !important;
+  font-size: 18px !important;
+  color: white !important;
 }
 </style>
