@@ -5,7 +5,7 @@ const drawer = ref(false);
 
 const links = [
   { to: '#target-homex', text: 'Home' },
-  { to: 'stores', text: 'Stores' },
+  { to: '#target-stores', text: 'Stores' },
   { to: '#target-products', text: 'Our Products' },
   { to: '#target-about', text: 'About' },
   { to: '#target-contact', text: 'Contact' },

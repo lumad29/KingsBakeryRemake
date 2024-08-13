@@ -41,9 +41,10 @@ const linkToPage = (targetId) => {
   </v-card>
   <DescriptionView />
   <ProductsView id="target-products" />
-  <!-- <StoresView id="target-stores" /> -->
+  <StoresView id="target-stores" />
   <AboutView id="target-about" />
-  <WorkView id="target-work" />
+  <!-- <WorkView id="target-work" /> -->
+  <ContactView id="target-contact" />
 </template>
 
 <style scoped>

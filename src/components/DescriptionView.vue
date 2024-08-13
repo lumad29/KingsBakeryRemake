@@ -32,7 +32,7 @@ const descriptionItems = [
         class="text-center mb-4 border-surface-light border-opacity-100"
         :class="
           index !== descriptionItems.length - 1 && smAndDown
-            ? 'border-b'
+            ? 'border-wrapper'
             : 'border-e'
         "
         v-for="(item, index) in descriptionItems"
@@ -50,3 +50,18 @@ const descriptionItems = [
     </v-row>
   </v-card>
 </template>
+<style scoped>
+.border-wrapper {
+  position: relative; /* This makes the wrapper a reference point for the line */
+  display: flex; /* Flexbox is a tool to center things */
+  justify-content: center; /* Centers the line inside the wrapper */
+}
+
+.border-wrapper::after {
+  content: ''; /* Creates an empty line */
+  position: absolute; /* Positions the line relative to the wrapper */
+  bottom: 0; /* Puts the line at the bottom of the wrapper */
+  width: 50%; /* Makes the line shorter or longer, adjust as needed */
+  border-bottom: 4px solid #b0bec5; /* Makes the line visible with color and thickness */
+}
+</style>
