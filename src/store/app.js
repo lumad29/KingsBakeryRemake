@@ -26,13 +26,15 @@ export const useAppStore = defineStore('app', {
         id: 1,
         name: 'Pastries',
         items: [
-          { id: 1, name: 'vanilla cupcake', price: 1, inStock: false, img: '/assets/products/vanilla-cupcake.jpg', description: 'this is a vanilla cupcake' },
+          { id: 1, name: 'Cinnamon Rolls', price: 1, inStock: false, img: '/assets/products/cinnamon-rolls.jpeg', description: 'Enjoy our warm, fluffy cinnamon rolls with a sweet cinnamon swirl and a perfect glaze. Ideal for a cozy treat any time of day' },
           {
-            id: 0, name: 'chocolate cupcake', price: 2, inStock: true, img: '/assets/products/chocolate-cupcake.jpg'
-            , description: 'this is a chocolate cupcake'
-          }
+            id: 0, name: 'Croissants', price: 2, inStock: true, img: '/assets/products/croissants.webp'
+            , description: 'One of our specialties! Delight in our croissants with their flaky, golden crust and soft, buttery interior'
+          },
+          { id: 1, name: 'Pain Au Chocolat', price: 1, inStock: false, img: '/assets/products/PainAuChocolat.jpg', description: 'Enjoy our Pain au Chocolat, a French classic with flaky layers and rich melted chocolate, capturing the essence of French pastry perfection.' },
+
         ],
-        pageImg: '/assets/flour.jpeg',
+        pageImg: '/assets/pastries.jpg',
         src: '/assets/croissant.jpg',
         text: 'Step into our bakery wonderland, where each pastry brings a little piece of joy. Whether you adore flaky croissants, filled danishes, or warm cinnamon rolls, our menu offers something to satisfy every craving'
       },

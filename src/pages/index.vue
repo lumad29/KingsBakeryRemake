@@ -1,5 +1,6 @@
 <script setup>
 import { useGoTo } from 'vuetify';
+import OurProducts from './ourProducts.vue';
 const route = useRoute(); // composable de router
 
 watch(route, (newValue, oldValue) =>
@@ -40,10 +41,10 @@ const linkToPage = (targetId) => {
     </v-row>
   </v-card>
   <DescriptionView />
-  <ProductsView id="target-products" />
-  <StoresView id="target-stores" />
+  <DelightsView />
+  <!-- <ProductsView id="target-products" /> -->
+  <!-- <StoresView id="target-stores" /> -->
   <AboutView id="target-about" />
-  <!-- <WorkView id="target-work" /> -->
   <ContactView id="target-contact" />
 </template>
 
