@@ -15,14 +15,15 @@ const goTo = useGoTo();
 const linkToPage = (targetId) => {
   goTo(targetId);
 };
+// color #37474F
 </script>
 
 <template>
   <v-card
     min-height="100"
     max-height="100vh"
-    class="fill-height rounded-0 home-view"
-    color="#37474F"
+    class="fill-height rounded-0 home-view text-white"
+    color="transparent"
     flat
   >
     <v-row class="mt-16" align="start" justify="center">
@@ -42,8 +43,6 @@ const linkToPage = (targetId) => {
   </v-card>
   <DescriptionView />
   <DelightsView />
-  <!-- <ProductsView id="target-products" /> -->
-  <!-- <StoresView id="target-stores" /> -->
   <AboutView id="target-about" />
   <ContactView id="target-contact" />
 </template>
