@@ -35,8 +35,9 @@ export const useAppStore = defineStore('app', {
           { id: 3, name: 'Danishes', price: 1, inStock: true, img: '/assets/products/danishes.webp', description: 'Try our Danishes, a delightful treat with buttery, flaky pastry and a variety of delicious fillings, embodying the perfect blend of sweetness and texture.' },
           { id: 4, name: 'Blueberry Muffin', price: 1, inStock: true, img: '/assets/products/blueberry-muffin.jpg', description: 'Try our blueberry muffins, bursting with juicy berries and a tender crumb. Each bite offers a perfect balance of sweetness and tartness.' },
           { id: 5, name: 'Vanilla Muffin', price: 1, inStock: true, img: '/assets/products/vanilla-muffin.jpg', description: 'Who doesn’t enjoy a classic vanilla muffin? with fluffy texture and a rich, buttery flavor. yum!' },
-          { id: 6, name: 'Profiterol', price: 1, inStock: true, img: '/assets/products/profiterol.jpg', description: 'Profiteroles are delicate pastry puffs made from choux dough, filled with cream, and topped with rich chocolate sauce.' },
-          { id: 7, name: 'Doughnut', price: 1, inStock: true, img: '/assets/products/doughnut.jpg', description: 'One of the most popular sweet treats made from fried dough, often coated with glaze, and sometimes filled with cream or jelly.' },
+          { id: 6, name: 'Profiteroles', price: 1, inStock: true, img: '/assets/products/profiterol.jpg', description: 'Profiteroles are delicate pastry puffs made from choux dough, filled with cream, and topped with rich chocolate sauce.' },
+          { id: 7, name: 'Doughnuts', price: 1, inStock: true, img: '/assets/products/doughnut.jpg', description: 'One of the most popular sweet treats made from fried dough, often coated with glaze, and sometimes filled with cream or jelly.' },
+          { id: 7, name: 'Brownies', price: 1, inStock: true, img: '/assets/products/brownies.jpg', description: 'Rich, fudgy squares of chocolatey goodness that melt in your mouth. Perfect on their own or paired with ice cream.' },
         ],
         pageImg: '/assets/pastries.jpg',
         src: '/assets/croissant.jpg',
@@ -63,6 +64,18 @@ export const useAppStore = defineStore('app', {
       {
         id: 3,
         name: 'Cakes and Pies',
+        items: [
+          { id: 0, name: 'Red Velvet', price: 1, inStock: false, img: '/assets/products/red-velvet-cake.jpeg', description: 'A soft, deep red sponge cake filled with layers of white chocolate cream cheese and topped with buttercream.' },
+          {
+            id: 1, name: 'Victoria Sponge', price: 2, inStock: true, img: '/assets/products/victoria-sponge-cake.jpeg'
+            , description: 'A classic British cake made of two light and airy sponge layers, filled with jam and cream, and dusted with powdered sugar.'
+          },
+          { id: 2, name: 'Marquise', price: 1, inStock: false, img: '/assets/products/marquise-cake.jpg', description: 'A flourless chocolate brownie filled with a layer of caramel, topped with dark chocolate mousse, and finished with crispy Italian meringue flakes.' },
+          { id: 3, name: 'Carrot Cake', price: 1, inStock: true, img: '/assets/products/carrot-cake.jpg', description: 'A moist, spiced cake with a surprising sweetness from grated carrots, topped with cream cheese frosting and a hint of crunch from toasted nuts' },
+          { id: 4, name: 'Strawberry Cheesecake', price: 1, inStock: true, img: '/assets/products/cheesecake.jpg', description: 'A creamy dessert made with cream cheese and sugar, set on a buttery crust, and topped with fresh strawberries or strawberry sauce.' },
+          { id: 5, name: 'Lemmon Pie', price: 1, inStock: true, img: '/assets/products/lemmon-pie.jpg', description: 'A tangy, creamy dessert with a smooth lemon filling set in a buttery pie crust, topped with meringue for a refreshing, sweet-tart treat.'},
+        ],
+         pageImg: '/assets/cake-bg.jpeg',
         src: '/assets/cake.jpg',
         text: 'Discover our irresistible cakes and pies, each crafted with a blend of expertise and flavor. From rich, velvety cakes to flaky, fruit-packed pies, every slice is a delightful treat for any moment worth celebrating.'
       },
