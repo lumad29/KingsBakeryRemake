@@ -35,7 +35,7 @@ const props = defineProps({
             v-if="product.name || isSelected"
             class="pa-3 bg-grey text-center font-size-name"
           >
-            {{ product.name }}
+            <h3>{{ product.name }}</h3>
           </div>
         </v-img>
       </v-card>

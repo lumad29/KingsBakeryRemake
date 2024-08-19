@@ -13,12 +13,12 @@ const descriptionItems = [
   {
     title: 'Baked with Love',
     subtitle: 'Feel the warmth of our oven-baked creations',
-    img: '/public/assets/oven-logo.jpeg',
+    img: '/assets/oven-logo.jpeg',
   },
   {
     title: 'Top quality Flour',
-    subtitle: 'Crafted with premium flour for exceptional tast',
-    img: '/public/assets/flour-logo.jpeg',
+    subtitle: 'Crafted with premium flour',
+    img: '/assets/flour-logo.jpeg',
   },
 ];
 </script>

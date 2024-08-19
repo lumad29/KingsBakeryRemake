@@ -43,12 +43,11 @@ const selectedProductId = computed(() => {
       <v-expand-transition>
         <v-sheet v-if="activeProductModel != null" height="250" color="#37474F">
           <div class="d-flex fill-height align-center justify-center">
-            <v-card
-              :title="selectedProduct"
-              color="#37474F"
-              elevation="0"
-              max-width="87%"
-            >
+            <v-card color="#37474F" elevation="0" max-width="87%">
+              <v-card-title>
+                <h3>{{ selectedProduct }}</h3>
+              </v-card-title>
+
               <v-card-text class="custom-text">
                 {{ selectedProductText }}
               </v-card-text>
@@ -58,7 +57,7 @@ const selectedProductId = computed(() => {
                   size="small"
                   :to="`/product/${selectedProductId}`"
                 >
-                  see all
+                  see all {{ selectedProduct }}
                 </v-btn>
               </div>
             </v-card>
