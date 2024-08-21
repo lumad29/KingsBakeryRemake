@@ -6,5 +6,8 @@ const model = ref(0);
 </script>
 
 <template>
-  <ProductsSlide :products="appStore.products" v-model="model" />
+  <ProductsSlide
+    :productCategories="appStore.productCategories"
+    v-model="model"
+  />
 </template>

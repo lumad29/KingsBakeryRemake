@@ -5,10 +5,10 @@ const route = useRoute('/product/[id]'); // esto tiene que ver con vue router
 // console.log(appStore.products[0].id);
 const router = useRouter();
 
-const selectedProduct = computed(() => {
+const selectedProductCategory = computed(() => {
   // esto tenia que ser convertido a Number
-  return appStore.products.find(
-    (product) => product.id === Number(route.params.id)
+  return appStore.productCategories.find(
+    (productCategory) => productCategory.id === Number(route.params.id)
   );
 });
 
@@ -19,34 +19,39 @@ function goBack() {
 
 <template>
   <div class="background-grey">
-    <v-img :src="selectedProduct.pageImg" height="400" cover max-height="320">
+    <v-img
+      :src="selectedProductCategory.pageImg"
+      height="400"
+      cover
+      max-height="320"
+    >
       <div class="fill-height d-flex align-center justify-center text-white">
         <v-icon @click="goBack" class="pa-6" size="large">
           mdi-arrow-left-drop-circle
         </v-icon>
-        <h1>{{ selectedProduct.name }}</h1>
+        <h1>{{ selectedProductCategory.name }}</h1>
       </div>
     </v-img>
 
     <v-container class="d-flex">
       <v-row class="my-5">
         <v-col
-          v-for="product in selectedProduct.items"
-          :key="product.id"
+          v-for="productCategory in selectedProductCategory.items"
+          :key="productCategory.id"
           cols="12"
           lg="6"
         >
           <v-card class="mx-auto bg-grey" width="90%" min-height="570">
-            <v-img height="400" :src="product.img" cover></v-img>
+            <v-img height="400" :src="productCategory.img" cover></v-img>
             <v-card-title class="custom-title">
-              {{ product.name }}
+              {{ productCategory.name }}
             </v-card-title>
 
             <v-card-subtitle
               style="white-space: pre-line"
               class="custom-subtitle"
             >
-              {{ product.description }}
+              {{ productCategory.description }}
             </v-card-subtitle>
 
             <!-- <v-card-subtitle class="text-h1" v-for="ingrediant in product.ingredients">
@@ -69,6 +74,7 @@ function goBack() {
 
 .custom-subtitle {
   font-size: 18px !important;
+  font-weight: 200;
   color: white !important;
 }
 </style>

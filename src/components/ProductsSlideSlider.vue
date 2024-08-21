@@ -1,11 +1,20 @@
 <script setup>
+import { computed } from 'vue';
+
 const model = defineModel(); // el v-model se recibe con defineModel()
 
 const props = defineProps({
-  products: {
+  productCategories: {
     type: Array,
     default: () => [],
   },
+});
+// trae todo excepto lo que tiene product.slider en falsy
+const filteredProductCategories = computed(() => {
+  return props.productCategories.filter((productCategory) => {
+    // same as product.slider !== falsy 0, null, undefined, NaN
+    return productCategory.slider;
+  });
 });
 </script>
 
@@ -18,13 +27,14 @@ const props = defineProps({
     center-active
   >
     <v-slide-group-item
-      v-for="product in products"
-      :key="product.id"
+      v-for="productCategory in filteredProductCategories"
+      :key="productCategory.id"
       v-slot="{ isSelected, toggle }"
     >
       <v-card :class="['ma-2']" height="400" width="300" @click="toggle">
+        <!--conditional chaining-->
         <v-img
-          :src="product.src"
+          :src="productCategory.slider?.avatar"
           height="100%"
           cover
           :gradient="
@@ -32,10 +42,10 @@ const props = defineProps({
           "
         >
           <div
-            v-if="product.name || isSelected"
+            v-if="productCategory.name || isSelected"
             class="pa-3 bg-grey text-center font-size-name"
           >
-            <h3>{{ product.name }}</h3>
+            <h3>{{ productCategory.name }}</h3>
           </div>
         </v-img>
       </v-card>

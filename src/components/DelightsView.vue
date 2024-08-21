@@ -2,7 +2,7 @@
 import { useDisplay } from 'vuetify';
 
 const { smAndDown } = useDisplay();
-
+//
 const delightsAndGifts = [
   {
     id: 1,
@@ -18,7 +18,7 @@ const delightsAndGifts = [
     title: 'Our Joy Boxes',
     subtitle: 'Gift our treats, or share with anybody',
     btnText: 'See our Options',
-    link: { to: 'stores', text: 'Stores' },
+    link: { to: 'product/7', text: 'Stores' },
   },
 ];
 </script>
