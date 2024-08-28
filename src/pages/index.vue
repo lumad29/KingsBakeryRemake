@@ -42,9 +42,10 @@ const goTo = useGoTo();
     </v-row>
   </v-card>
   <DescriptionView />
-  <DelightsView />
+  <OurDelightsView />
   <AboutView id="target-about" />
   <ContactView id="target-contact" />
+  <FooterView />
 </template>
 
 <style scoped>

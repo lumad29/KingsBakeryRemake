@@ -89,7 +89,7 @@ export const useAppStore = defineStore('app', {
         text: 'Discover our irresistible cakes and pies, each crafted with a blend of expertise and flavor. From rich, velvety cakes to flaky, fruit-packed pies, every slice is a delightful treat for any moment worth celebrating.'
       },
       {
-        id: 6,
+        id: 4,
         name: 'Sandwiches',
         items: [
           { id: 0, name: 'Cookie Box', price: 1, inStock: false, img: '/assets/products/gift-box-1.jpg', description: 'cookie box.' },
@@ -101,7 +101,7 @@ export const useAppStore = defineStore('app', {
         text: 'Try our selection of sandwiches, testy and fresh. With a variety of hearty fillings and crisp ingredients, every bite offers a satisfying meal for any time of day.'
       },
       {
-        id: 4,
+        id: 5,
         name: 'Gluten-Free & Vegan',
         items: [
           { id: 0, name: 'Gluten-Free Bread', price: 1, inStock: false, img: '/assets/products/gluten-free-bread.jpg', description: ' A nutritious and safe multicereal gluten-free bread is made without wheat, barley, or rye, using a blend of various grains and seeds.' },
@@ -121,7 +121,7 @@ export const useAppStore = defineStore('app', {
         text: 'Explore our delicious gluten-free and vegan delights, where flavor meets inclusivity. Dive into a menu that celebrates both health-conscious choices and vibrant flavors, ensuring every bite is a delightful experience for all.'
       },
       {
-        id: 5,
+        id: 6,
         name: 'Drinks',
         items: [
           { id: 0, name: 'Cold Brew', price: 1, inStock: false, img: '/assets/products/cold-brew.jpg', description: 'Smooth and refreshing, Cold Brew is made by steeping ground coffee in cold water for 24 hours. It’s less acidic and offers a rich, mellow flavor, perfect served over ice.' },

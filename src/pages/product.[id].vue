@@ -74,7 +74,7 @@ function goBack() {
 
 .custom-subtitle {
   font-size: 18px !important;
-  font-weight: 200;
+  font-weight: 450;
   color: white !important;
 }
 </style>
