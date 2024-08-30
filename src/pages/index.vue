@@ -1,7 +1,8 @@
 <script setup>
-import { useGoTo } from 'vuetify';
-import OurProducts from './ourProducts.vue';
-const route = useRoute(); // composable de router
+import { useGoTo } from 'vuetify'
+import OurProducts from './ourProducts.vue'
+
+const route = useRoute() // composable de router
 
 // watch(route, (newValue, oldValue) =>
 //   setTimeout(() => {
@@ -10,7 +11,7 @@ const route = useRoute(); // composable de router
 // );
 // linkToPage(link.to)
 
-const goTo = useGoTo();
+const goTo = useGoTo()
 
 // const linkToPage = (targetId) => {
 //   goTo(targetId);
@@ -29,7 +30,9 @@ const goTo = useGoTo();
     <v-row class="mt-16" align="start" justify="center">
       <v-col class="pa-8 ma-8" cols="12" md="8">
         <div class="ml-6">
-          <h1 class="my-4 main-title">We are bread experts</h1>
+          <h1 class="my-4 main-title">
+            We are bread experts
+          </h1>
 
           <p class="custom-font-size-2">
             Enjoy freshly baked bread at our bakery! From hearty whole grain
