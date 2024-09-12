@@ -1,7 +1,7 @@
 <script setup>
-import { useDisplay } from 'vuetify';
+import { useDisplay } from 'vuetify'
 
-const { smAndDown } = useDisplay();
+const { smAndDown } = useDisplay()
 // useAlgo => composables. todos los composables son funciones!
 
 const descriptionItems = [
@@ -20,13 +20,16 @@ const descriptionItems = [
     subtitle: 'Crafted with premium flour',
     img: '/assets/flour-logo.jpeg',
   },
-];
+]
 </script>
+
 <template>
   <v-card color="#37474F" class="rounded-0 py-16" flat>
     <v-row align="center" justify="center">
       <!-- First Column -->
       <v-col
+        v-for="(item, index) in descriptionItems"
+        :key="item.title"
         cols="12"
         md="4"
         class="text-center mb-4 border-surface-light border-opacity-100"
@@ -35,14 +38,14 @@ const descriptionItems = [
             ? 'border-wrapper'
             : 'border-e'
         "
-        v-for="(item, index) in descriptionItems"
-        :key="item.title"
       >
-        <div class="bg-yellowx pa-2 d-flex justify-center">
-          <div class="bg-bluex pa-2">
+        <div class="pa-2 d-flex justify-center">
+          <div class="pa-2">
             <v-img :src="item.img" height="100" class="mb-4 mx-auto" />
             <h2>{{ item.title }}</h2>
-            <p>{{ item.subtitle }}</p>
+            <p style="font-size: 20px;">
+              {{ item.subtitle }}
+            </p>
             <!-- <p>{{ index === descriptionItems.length - 1 }}</p> -->
           </div>
         </div>
@@ -50,6 +53,7 @@ const descriptionItems = [
     </v-row>
   </v-card>
 </template>
+
 <style scoped>
 .border-wrapper {
   position: relative; /* This makes the wrapper a reference point for the line */

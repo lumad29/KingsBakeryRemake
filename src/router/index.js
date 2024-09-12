@@ -4,7 +4,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 // import PastriesView from '@/pages/PastriesView.vue'
 import { routes } from 'vue-router/auto-routes'
 
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
@@ -22,7 +21,7 @@ const router = createRouter({
   // ]
   scrollBehavior(to, from, savedPosition) {
     // Always scroll to top
-    return { top: 0 };
+    return { top: 0 }
   },
 })
 

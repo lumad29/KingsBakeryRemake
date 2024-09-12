@@ -2,7 +2,7 @@
 import { useGoTo } from 'vuetify'
 import OurProducts from './ourProducts.vue'
 
-const route = useRoute() // composable de router
+// const route = useRoute() // composable de router
 
 // watch(route, (newValue, oldValue) =>
 //   setTimeout(() => {
@@ -11,7 +11,7 @@ const route = useRoute() // composable de router
 // );
 // linkToPage(link.to)
 
-const goTo = useGoTo()
+// const goTo = useGoTo()
 
 // const linkToPage = (targetId) => {
 //   goTo(targetId);
@@ -23,7 +23,7 @@ const goTo = useGoTo()
   <v-card
     min-height="100"
     max-height="100vh"
-    class="fill-height rounded-0 home-view text-white"
+    class="fill-height rounded-0 home-view text-white "
     color="transparent"
     flat
   >
@@ -48,7 +48,6 @@ const goTo = useGoTo()
   <OurDelightsView />
   <AboutView id="target-about" />
   <ContactView id="target-contact" />
-  <FooterView />
 </template>
 
 <style scoped>
@@ -69,16 +68,19 @@ const goTo = useGoTo()
 .custom-font-size {
   font-size: 3rem;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .custom-font-size-2 {
   /* font-family: "Roboto", sans-serif; */
   font-weight: 450;
   line-height: 2.2;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   /* color: #d4d8da; */
+font-weight: 500;
 }
 .main-title {
   font-size: 3rem;
+
 }
 </style>

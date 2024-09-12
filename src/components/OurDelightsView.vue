@@ -1,7 +1,7 @@
 <script setup>
-import { useDisplay } from 'vuetify';
+import { useDisplay } from 'vuetify'
 
-const { smAndDown } = useDisplay();
+const { smAndDown } = useDisplay()
 //
 const delightsAndGifts = [
   {
@@ -20,7 +20,7 @@ const delightsAndGifts = [
     btnText: 'See our Options',
     link: { to: 'product/7', text: 'Stores' },
   },
-];
+]
 </script>
 
 <template>
@@ -29,11 +29,11 @@ const delightsAndGifts = [
     <div class="px-2">
       <v-row>
         <v-col
+          v-for="product in delightsAndGifts"
+          :key="product.id"
           class="text-center"
           cols="12"
           md="6"
-          v-for="product in delightsAndGifts"
-          :key="product.id"
         >
           <v-img :src="product.image" class="text-white" height="100%" cover>
             <div class="fill-height d-flex flex-column justify-center">
@@ -75,11 +75,14 @@ const delightsAndGifts = [
 }
 .titleBig {
   font-size: 3rem;
+
 }
 .subTitleSmall {
   font-weight: 400;
+
 }
 .subTitleBig {
-  font-weight: 500;
+  font-weight: 600;
+
 }
 </style>

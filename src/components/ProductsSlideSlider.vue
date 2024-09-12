@@ -1,21 +1,20 @@
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 
-const model = defineModel(); // el v-model se recibe con defineModel()
+// el v-model se recibe con defineModel()
 
 const props = defineProps({
   productCategories: {
     type: Array,
     default: () => [],
   },
-});
-// trae todo excepto lo que tiene product.slider en falsy
+}); const model = defineModel()// trae todo excepto lo que tiene product.slider en falsy
 const filteredProductCategories = computed(() => {
   return props.productCategories.filter((productCategory) => {
     // same as product.slider !== falsy 0, null, undefined, NaN
-    return productCategory.slider;
-  });
-});
+    return productCategory.slider
+  })
+})
 </script>
 
 <template>
@@ -31,8 +30,8 @@ const filteredProductCategories = computed(() => {
       :key="productCategory.id"
       v-slot="{ isSelected, toggle }"
     >
-      <v-card :class="['ma-2']" height="400" width="300" @click="toggle">
-        <!--conditional chaining-->
+      <v-card class="ma-2" height="400" width="300" @click="toggle">
+        <!-- conditional chaining -->
         <v-img
           :src="productCategory.slider?.avatar"
           height="100%"

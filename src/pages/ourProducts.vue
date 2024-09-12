@@ -1,13 +1,14 @@
 <script setup>
-import { useAppStore } from '@/store/app';
-const appStore = useAppStore();
+import { useAppStore } from '@/store/app'
 
-const model = ref(0);
+const appStore = useAppStore()
+
+const activeSlide = ref(0)
 </script>
 
 <template>
   <ProductsSlide
-    :productCategories="appStore.productCategories"
-    v-model="model"
+    v-model="activeSlide"
+    :product-categories="appStore.productCategories"
   />
 </template>

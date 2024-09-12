@@ -1,19 +1,20 @@
 <script setup>
-import { useAppStore } from '@/store/app'; // esto tiene que ver con pinia
-const appStore = useAppStore();
-const route = useRoute('/product/[id]'); // esto tiene que ver con vue router
+import { useAppStore } from '@/store/app'
+// esto tiene que ver con pinia
+const appStore = useAppStore()
+const route = useRoute('/product/[id]') // esto tiene que ver con vue router
 // console.log(appStore.products[0].id);
-const router = useRouter();
+const router = useRouter()
 
 const selectedProductCategory = computed(() => {
   // esto tenia que ser convertido a Number
   return appStore.productCategories.find(
-    (productCategory) => productCategory.id === Number(route.params.id)
-  );
-});
+    productCategory => productCategory.id === Number(route.params.id),
+  )
+})
 
 function goBack() {
-  router.go(-1);
+  router.go(-1)
 }
 </script>
 
@@ -26,7 +27,7 @@ function goBack() {
       max-height="320"
     >
       <div class="fill-height d-flex align-center justify-center text-white">
-        <v-icon @click="goBack" class="pa-6" size="large">
+        <v-icon class="pa-6" size="large" @click="goBack">
           mdi-arrow-left-drop-circle
         </v-icon>
         <h1>{{ selectedProductCategory.name }}</h1>
@@ -41,8 +42,8 @@ function goBack() {
           cols="12"
           lg="6"
         >
-          <v-card class="mx-auto bg-grey" width="90%" min-height="570">
-            <v-img height="400" :src="productCategory.img" cover></v-img>
+          <v-card class="mx-auto bg-grey" width="95%" min-height="570">
+            <v-img height="400" :src="productCategory.img" cover />
             <v-card-title class="custom-title">
               {{ productCategory.name }}
             </v-card-title>
@@ -63,6 +64,7 @@ function goBack() {
     </v-container>
   </div>
 </template>
+
 <style>
 .background-grey {
   background-color: rgb(55, 71, 79);

@@ -1,16 +1,24 @@
 <script setup>
-import { useGoTo } from 'vuetify';
+import { useGoTo } from 'vuetify'
+
 // :items="items"
-const drawer = ref(false);
+const drawer = ref(false)
+
+const router = useRouter()
 
 const links = [
-  { to: '#target-homex', text: 'Home' },
+  { to: '/', text: 'Home' },
   { to: 'stores', text: 'Stores' },
   { to: 'ourProducts', text: 'Our Products' },
-  { to: 'ourCafe', text: 'Our Cafe' },
+  { to: 'OurCafe', text: 'Our Cafe' },
   { to: '#target-about', text: 'About' },
   { to: '#target-contact', text: 'Contact' },
-];
+]
+
+function toggleDrawer(linkTo) {
+  router.push(linkTo)
+  drawer.value = false
+}
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 // const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
@@ -22,32 +30,35 @@ const links = [
 </script>
 
 <template>
-  <v-app-bar :elevation="0" color="blue-grey-darken-3">
+  <v-app-bar :elevation="0" color="blue-grey-darken-3" height="80">
     <v-app-bar-title class="hidden-sm-and-downx my-font font-weight-bold">
-      <router-link to="/" class="nav-link">King's Bakery</router-link>
+      <router-link to="/" class="nav-link">
+        <h2>King's Bakery</h2>
+      </router-link>
     </v-app-bar-title>
 
     <v-app-bar-nav-icon
-      @click="drawer = !drawer"
       class="hidden-md-and-up ma-12"
+      @click="drawer = !drawer"
     />
 
     <!-- <v-btn @click="linkToPage('#target-about')">GoTo Stores</v-btn> -->
 
     <nav class="nav-links nav-links hidden-sm-and-down">
-      <!--llamo al evento onclick y le paso el paramtro de link que es mi array de objetos y to que es el el key -->
+      <!-- llamo al evento onclick y le paso el paramtro de link que es mi array de objetos y to que es el el key -->
       <div
         v-for="link in links"
         :key="link.to"
-        @click="$router.push(`/${link.to}`)"
         class="nav-link"
+        style="font-size: 18px;"
+        @click="$router.push(`/${link.to}`)"
       >
         {{ link.text }}
       </div>
     </nav>
   </v-app-bar>
 
-  <!--navigation drawer-->
+  <!-- navigation drawer -->
   <v-navigation-drawer
     v-model="drawer"
     color="blue-grey-darken-3"
@@ -59,8 +70,8 @@ const links = [
       <v-list-item
         v-for="link in links"
         :key="link.to"
-        @click="linkToPage(link.to)"
         class="nav-link"
+        @click="toggleDrawer(link.to)"
       >
         {{ link.text }}
       </v-list-item>
@@ -74,6 +85,7 @@ const links = [
   color: white;
   margin: 0 1rem 0 1rem;
   cursor: pointer;
+
 }
 
 .nav-links {

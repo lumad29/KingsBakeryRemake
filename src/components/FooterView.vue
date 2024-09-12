@@ -9,16 +9,14 @@ const icons = ref([
 
 <template>
   <v-footer
-    class="bg-indigo-lighten-1 text-center d-flex flex-column justify-center img-footer" height="250"
+    class="bg-redx text-center d-flex flex-column justify-center img-footer" height="300"
   >
-    <v-container class="bg-grey-custom rounded-lg" fluid>
+    <v-container class="bg-grey-custom rounded-lg font-weight-medium" fluid>
       <v-row no-gutters>
-        <v-col>image</v-col>
-
-        <v-col>link to our delights</v-col>
-        <v-col>store links</v-col>
+        <v-col><p>link to our Products</p></v-col>
+        <v-col><p>link to stores</p></v-col>
         <v-col>
-          insta
+          link to Instagram
 
           <div>
             <v-btn
@@ -42,12 +40,18 @@ const icons = ref([
 
   <style scoped>
   .img-footer {
-    background-image: url("assets/bg-bread-3.png");
+    background-image: url("assets/footer-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .bg-grey-custom {
-    background-color: rgb(44, 58, 66);
+    background-color: rgb(83, 106, 119, 0.7);
+    color: white;
   }
+/*
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  } */
 </style>
