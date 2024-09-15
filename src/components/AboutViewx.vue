@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="about-view">
-        <h1>This is the About</h1>
-    </div>
+  <div class="about-view">
+    <h1>This is the About</h1>
+  </div>
 </template>
 
 <style>

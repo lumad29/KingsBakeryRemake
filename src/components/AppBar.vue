@@ -7,11 +7,11 @@ const drawer = ref(false)
 const router = useRouter()
 
 const links = [
-  { to: '/', text: 'Home' },
-  { to: 'stores', text: 'Stores' },
+  { to: '', text: 'Home' },
+  { to: 'locations', text: 'Locations' },
   { to: 'ourProducts', text: 'Our Products' },
   { to: 'OurCafe', text: 'Our Cafe' },
-  { to: '#target-about', text: 'About' },
+  { to: 'about', text: 'About' },
   { to: '#target-contact', text: 'Contact' },
 ]
 
@@ -55,6 +55,16 @@ function toggleDrawer(linkTo) {
       >
         {{ link.text }}
       </div>
+      <v-list-item
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="no-hover"
+      >
+        <v-icon>
+          mdi-instagram
+        </v-icon>
+      </v-list-item>
     </nav>
   </v-app-bar>
 

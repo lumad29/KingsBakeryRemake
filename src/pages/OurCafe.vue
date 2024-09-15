@@ -34,24 +34,43 @@ function goBack() {
   </v-container> -->
 
   <v-row class="ma-5x">
-    <v-col cols="12" lg="6" sm="12">
+    <v-col
+      v-motion-slide-left :delay="80"
+      :duration="1000" cols="12" lg="6" sm="12"
+    >
       <div :class="{ 'py-3': smAndDown, 'pa-10': !smAndDown }">
         <v-img src="/public/assets/our-cafe-4.jpg" />
       </div>
       <div />
     </v-col>
-    <v-col cols="12" lg="5" sm="12">
-      <v-container class="d-flex flex-column justify-start text-white mt-5">
-        <p class=" custom-font-size bg-redx">
-          A perfect place to enjoy<br> our pastries
+    <v-col v-motion-slide-right cols="12" lg="5" sm="12" :delay="80" :duration="1000">
+      <!-- <v-container class="d-flex flex-column text-white" :class="{ 'align-center': smAndDown, 'mt-8': !smAndDown }"> -->
+      <v-container
+        class="d-flex flex-column text-white"
+        :class="{
+          'align-center': smAndDown,
+          'mt-8': !smAndDown,
+          'pa-6': smAndDown, /* Add padding on small screens */
+        }"
+      >
+        <p class="my-3" style="font-size: 19px;">
+          Visit our Cafe
         </p>
-        <div class="py-5 bg-bluex">
-          <p style="font-size: 20px; font-weight: 300; line-height: 2;">
-            Every sip at our café is a unique experience, thanks to our carefully crafted recipes. Our expert baristas, masters of the coffee craft, bring tradition to life with each cup, skillfully replicating classic flavors. Pair your coffee with our freshly baked goods for a cozy and unforgettable café experience.
+        <div class=" custom-font-size">
+          <p>
+            A perfect place to enjoy
+          </p>
+          <p class="d-flex" :class="{ 'justify-center': smAndDown, 'justify-start': !smAndDown }">
+            our pastries
           </p>
         </div>
-        <v-btn variant="outlined" color="warningx" class="narrow-btn">
-          Stores
+        <div class="py-5">
+          <p style="font-size: 19px; font-weight: 300; line-height: 1.8;">
+            Welcome to our cozy café, where the smell of freshly baked pastries invites you to relax and enjoy the moment. Grab a warm pastry, and pair it with a perfectly brewed coffee. Whether you're meeting up with friends or taking a quiet break, every visit brings a little comfort and a taste of something special.
+          </p>
+        </div>
+        <v-btn variant="outlined" class="narrow-btn hover-white">
+          Locations
         </v-btn>
       </v-container>
     </v-col>
@@ -71,5 +90,10 @@ function goBack() {
   }
   .narrow-btn {
   width: 120px; /* Adjust width as needed */
+}
+
+.hover-white:hover {
+  background-color: white;
+  color: black;
 }
 </style>
