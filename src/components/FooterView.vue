@@ -9,7 +9,7 @@ const icons = ref([
 
 <template>
   <v-footer
-    class="bg-redx text-center d-flex flex-column justify-center img-footer" height="300"
+    class="text-center d-flex flex-column justify-center img-footer" height="300"
   >
     <v-container class="bg-grey-custom rounded-lg font-weight-medium" fluid>
       <v-row no-gutters>
@@ -17,7 +17,6 @@ const icons = ref([
         <v-col><p>link to stores</p></v-col>
         <v-col>
           link to Instagram
-
           <div>
             <v-btn
               v-for="icon in icons"
@@ -40,7 +39,7 @@ const icons = ref([
 
   <style scoped>
   .img-footer {
-    background-image: url("assets/footer-bg.png");
+    background-image: url("/public/assets/footer-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
