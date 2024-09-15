@@ -4,7 +4,7 @@ import { useGoTo } from 'vuetify'
 // :items="items"
 const drawer = ref(false)
 
-const router = useRouter()
+// const router = useRouter()
 
 const links = [
   { to: '', text: 'Home' },
@@ -15,10 +15,10 @@ const links = [
   { to: '#target-contact', text: 'Contact' },
 ]
 
-function toggleDrawer(linkTo) {
-  router.push(linkTo)
-  drawer.value = false
-}
+// function toggleDrawer(linkTo) {
+//   router.push(linkTo)
+//   drawer.value = false
+// }
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 // const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
@@ -27,6 +27,7 @@ function toggleDrawer(linkTo) {
 //   drawer.value = false
 //   goTo(targetId) // va hacia. es mi evento con un paraemtro de target
 // }
+//   @click="toggleDrawer(link.to)"
 </script>
 
 <template>
@@ -74,14 +75,14 @@ function toggleDrawer(linkTo) {
     color="blue-grey-darken-3"
     location="top"
     :mobile-breakpoint="0"
-    permanent
+    permanentx
   >
     <v-list>
       <v-list-item
         v-for="link in links"
         :key="link.to"
         class="nav-link"
-        @click="toggleDrawer(link.to)"
+        @click="$router.push(`/${link.to}`)"
       >
         {{ link.text }}
       </v-list-item>

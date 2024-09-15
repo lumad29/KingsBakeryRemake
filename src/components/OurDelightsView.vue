@@ -10,7 +10,7 @@ const delightsAndGifts = [
     title: 'Explore our specialties',
     subtitle: 'Warm treats straight from the oven',
     btnText: 'Explore our Delights',
-    link: { to: 'ourProducts', text: 'Our Products' },
+    link: { to: '/ourProducts', text: 'Our Products' },
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const delightsAndGifts = [
     title: 'Our Joy Boxes',
     subtitle: 'Gift our treats, or share with anybody',
     btnText: 'See our Options',
-    link: { to: 'product/7', text: 'Stores' },
+    link: { to: '/product/7', text: 'Stores' },
   },
 ]
 </script>

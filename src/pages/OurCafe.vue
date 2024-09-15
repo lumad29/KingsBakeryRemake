@@ -33,24 +33,23 @@ function goBack() {
     <h2>live the experience</h2>
   </v-container> -->
 
-  <v-row class="ma-5x">
+  <v-row>
     <v-col
       v-motion-slide-left :delay="80"
       :duration="1000" cols="12" lg="6" sm="12"
     >
-      <div :class="{ 'py-3': smAndDown, 'pa-10': !smAndDown }">
+      <div :class="{ 'mx-3': smAndDown, 'pa-10': !smAndDown }" class="my-3">
         <v-img src="/public/assets/our-cafe-4.jpg" />
       </div>
       <div />
     </v-col>
     <v-col v-motion-slide-right cols="12" lg="5" sm="12" :delay="80" :duration="1000">
-      <!-- <v-container class="d-flex flex-column text-white" :class="{ 'align-center': smAndDown, 'mt-8': !smAndDown }"> -->
       <v-container
         class="d-flex flex-column text-white"
         :class="{
           'align-center': smAndDown,
           'mt-8': !smAndDown,
-          'pa-6': smAndDown, /* Add padding on small screens */
+          'pa-6': smAndDown,
         }"
       >
         <p class="my-3" style="font-size: 19px;">
