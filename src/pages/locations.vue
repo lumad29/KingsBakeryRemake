@@ -1,6 +1,65 @@
-<script setup></script>
+<script setup>
+const router = useRouter()
+function goBack() {
+  router.go(-1)
+}
+
+// :class="{
+//       'align-center': smAndDown,
+//       'mt-8': !smAndDown,
+//       'pa-6': smAndDown,
+//     }"
+</script>
 
 <template>
+  <div>
+    <v-img
+      src="/assets/bread-shop-1.png"
+      cover
+      max-height="320"
+      style="opacity: 0.8"
+    >
+      <div class="fill-height d-flex align-center justify-center text-white">
+        <v-icon class="pa-6" size="large" @click="goBack">
+          mdi-arrow-left-drop-circle
+        </v-icon>
+        <h1>Locations</h1>
+      </div>
+    </v-img>
+  </div>
+
+  <v-container
+    class="d-flex flex-column text-white justify-center align-center text-center px-15 my-5"
+  >
+    <p style="font-size: 19px; font-weight: 300; line-height: 1.8;">
+      We’re a bakery focused on crafting fresh, handmade treats with the best ingredients.
+      Every bite is made with care to bring you something special, whether sweet or savory.
+    </p>
+  </v-container>
+  <v-row class="mx-10">
+    <v-col class="bg-blue" cols="12" lg="6" sm="12">
+      <div>
+        <h3 class="my-4 py-2">
+          Leroma Gauss - - - - - - - - - - - - - -
+        </h3>
+        <p>
+          Av. Carlos Federico Gauss 5619 | Zona Norte, Córdoba | +54 9 351 6594321
+        </p>
+      </div>
+      <div>
+        <h3 class="my-4 py-2">
+          Leroma Gauss - - - - - - - - - - - - - -
+        </h3>
+        <p>Av. Carlos Federico Gauss 5619 | Zona Norte, Córdoba | +54 9 351 6594321</p>
+      </div>
+    </v-col>
+    <v-col class="bg-red">
+      map
+    </v-col>
+  </v-row>
+</template>
+
+<!-- <template>
   <v-card
     min-height="100"
     max-height="100%"
@@ -16,12 +75,11 @@
         :delay="80"
         :duration="1000"
       >
-        <!-- <v-btn @click="h1Key++">{{ h1Key }}re-render title</v-btn> -->
-        <!-- <v-fade-transition hide-on-leave> -->
+
         <component :is="h1">
           Find your favorite store
         </component>
-        <!-- </v-fade-transition> -->
+
         <div class="mt-4">
           <p class="custom-font">
             Enjoy the comforting aroma of freshly baked bread at our bakeries,
@@ -90,13 +148,12 @@
       <v-col class="fill-height" cols="11" md="5">
         <div>
           <v-img src="/assets/bread-shop-1.png" height="100%" class="mb-4" />
-          <!-- gradient="to bottom, rgba(150, 150, 150, 0.3), rgba(34, 34, 34, 0.4)" -->
           <v-img src="/public/assets/bg-bread-3.png" />
         </div>
       </v-col>
     </v-row>
   </v-card>
-</template>
+</template> -->
 
 <style>
 ul li {
