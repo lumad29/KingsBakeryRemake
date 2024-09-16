@@ -18,4 +18,8 @@ html {
 .v-application {
   background-color: rgb(55, 71, 79) !important;
 }
+
+body {
+    overflow-x: hidden;
+  }
 </style>
