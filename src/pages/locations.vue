@@ -1,14 +1,49 @@
 <script setup>
+import { useDisplay } from 'vuetify'
+
 const router = useRouter()
+
+const { smAndDown } = useDisplay()
+
 function goBack() {
   router.go(-1)
 }
 
+const mapUrl
+= 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39730.750301540305!2d-0.15085723140336946!3d51.51006233253554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1726537329362!5m2!1sen!2sus'
 // :class="{
 //       'align-center': smAndDown,
 //       'mt-8': !smAndDown,
 //       'pa-6': smAndDown,
 //     }"
+
+const mapData = [
+  {
+    id: 1,
+    neighborhood: 'London Bridge',
+    address: '20 Queen Elizabeth St, London SE1 2RJ, UK',
+  },
+  {
+    id: 2,
+    neighborhood: 'Soho',
+    address: '20 Brewer St, London W1F 0SL, UK',
+  },
+  {
+    id: 3,
+    neighborhood: 'Clapham',
+    address: '10-12 Old Town, London SW4 0JY, UK',
+  },
+  {
+    id: 4,
+    neighborhood: 'Hampstead',
+    address: 'Olave Centre, 12C Lyndhurst Rd, London NW3 5PQ, UK',
+  },
+  {
+    id: 5,
+    neighborhood: 'Cricklewood',
+    address: '3 Wren Ave, London NW2 6UG, UK',
+  },
+]
 </script>
 
 <template>
@@ -36,145 +71,49 @@ function goBack() {
       Every bite is made with care to bring you something special, whether sweet or savory.
     </p>
   </v-container>
-  <v-row class="mx-10">
-    <v-col class="bg-blue" cols="12" lg="6" sm="12">
-      <div>
-        <h3 class="my-4 py-2">
-          Leroma Gauss - - - - - - - - - - - - - -
+
+  <v-row :class="{ 'ma-15': !smAndDown, 'ma-8': smAndDown }">
+    <v-col cols="12" lg="6" sm="12">
+      <div v-for="location in mapData" :key="location.id" class="text-white">
+        <h3 class="my-4 py-2 dotted-container">
+          <span class="text-content">{{ location.neighborhood }}</span>
+          <span class="dotted-line text" />
         </h3>
         <p>
-          Av. Carlos Federico Gauss 5619 | Zona Norte, Córdoba | +54 9 351 6594321
+          {{ location.address }}
         </p>
       </div>
-      <div>
-        <h3 class="my-4 py-2">
-          Leroma Gauss - - - - - - - - - - - - - -
-        </h3>
-        <p>Av. Carlos Federico Gauss 5619 | Zona Norte, Córdoba | +54 9 351 6594321</p>
-      </div>
     </v-col>
-    <v-col class="bg-red">
-      map
+    <v-col class="bg-redx">
+      <v-container class="d-flex align-center justify-center">
+        <iframe
+          width="600"
+          height="500"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          :src="mapUrl"
+        />
+      </v-container>
     </v-col>
   </v-row>
 </template>
 
-<!-- <template>
-  <v-card
-    min-height="100"
-    max-height="100%"
-    class="fill-heightx rounded-0 pt-5"
-    color="#37474F"
-    flat
-  >
-    <v-row class="mt-16" align="start" justify="center">
-      <v-col
-        v-motion-slide-visible-left
-        cols="11"
-        md="5"
-        :delay="80"
-        :duration="1000"
-      >
-
-        <component :is="h1">
-          Find your favorite store
-        </component>
-
-        <div class="mt-4">
-          <p class="custom-font">
-            Enjoy the comforting aroma of freshly baked bread at our bakeries,
-            open 24 hours a day, every day of the week so you can enjoy warm,
-            delicious bread whenever you want.
-            <br>
-            Pick your most convenient store, we are all over London!
-          </p>
-          <v-row>
-            <v-col class="my-10">
-              <ul class="list-icons">
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  Elizabeth St
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  20 Brewer Street
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  10-12 Old Town
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  12C Lyndhurst Rd
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  3 Wren Ave
-                </li>
-              </ul>
-            </v-col>
-            <v-col class="my-10">
-              <ul class="list-icons">
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  612 Lordship
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  89 Nightingale
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  28-30 Cale Street
-                </li>
-                <li>
-                  <v-icon>mdi-map-marker</v-icon>
-                  <span class="text-margin" />
-                  Highgate Rd
-                </li>
-              </ul>
-            </v-col>
-          </v-row>
-        </div>
-      </v-col>
-      <v-col class="fill-height" cols="11" md="5">
-        <div>
-          <v-img src="/assets/bread-shop-1.png" height="100%" class="mb-4" />
-          <v-img src="/public/assets/bg-bread-3.png" />
-        </div>
-      </v-col>
-    </v-row>
-  </v-card>
-</template> -->
-
 <style>
-ul li {
-  margin-top: 1rem;
+.dotted-container {
+  display: flex;            /* Use flexbox for layout */
+  align-items: center;      /* Center items vertically */
+  width: 100%;              /* Ensure it takes the full width of the parent */
 }
 
-.stores-view {
-  background-color: #37474f;
-  color: white;
+.text-content {
+  flex-shrink: 0;           /* Prevent text from shrinking */
 }
 
-.list-icons {
-  list-style-type: none;
-}
-
-.text-margin {
-  margin-left: 1rem;
-}
-
-.custom-font {
-  line-height: 2.2;
-  font-size: 17px;
+.dotted-line {
+  flex-grow: 1;             /* Allows the dotted line to take the remaining space */
+  border-bottom: 2px dotted #fff; /* Dotted line style */
+  margin-left: 10px;        /* Space between text and dotted line */
 }
 </style>
