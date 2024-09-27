@@ -4,9 +4,6 @@ import { useDisplay } from 'vuetify'
 
 const router = useRouter()
 const { smAndDown } = useDisplay()
-// :class="{ 'custom-border-right': !smAndDown, 'custom-border-bottom': smAndDown }"
-// smAndDown ? '' : 'pa-10'"
-// 'pa-10': !smAndDown
 function goBack() {
   router.go(-1)
 }
@@ -28,10 +25,6 @@ function goBack() {
       </div>
     </v-img>
   </div>
-
-  <!-- <v-container class="d-flex justify-center text-white">
-    <h2>live the experience</h2>
-  </v-container> -->
 
   <v-row>
     <v-col
@@ -74,6 +67,43 @@ function goBack() {
       </v-container>
     </v-col>
   </v-row>
+
+  <v-row>
+    <v-col v-motion-slide-left cols="12" lg="6" sm="12" :delay="80" :duration="1000">
+      <v-container
+        class="d-flex flex-column text-white"
+        :class="{
+          'align-center': smAndDown,
+          'mx-15': !smAndDown,
+          'pa-6': smAndDown,
+          'my-9': !smAndDown,
+        }"
+      >
+        <p class="my-3" style="font-size: 19px;">
+          Coworking
+        </p>
+        <div class="custom-font-size ">
+          <p class="d-flex" :class="{ 'justify-center': smAndDown, 'justify-start': !smAndDown }">
+            Grab a seat in our
+          </p>
+          <p class="d-flex" :class="{ 'justify-center': smAndDown, 'justify-start': !smAndDown }">
+            Cokorwking
+          </p>
+          <div class="py-5">
+            <p style="font-size: 19px; font-weight: 300; line-height: 1.8;">
+              Enjoy our our cozy spot to get things done. Stay energized with fresh coffee and bakery treats. Whether you're working solo, meeting clients, or need a change of pace, we've got the perfect blend of comfort and productivity.
+            </p>
+          </div>
+        </div>
+      </v-container>
+    </v-col>
+    <v-col cols="12" lg="6" sm="12">
+      <div :class="{ 'mx-3': smAndDown, 'pa-10': !smAndDown }">
+        <v-img src="/public/assets/our-cafe-12.jpg" />
+      </div>
+    </v-col>
+  </v-row>
+
   <v-row class="d-flex justify-center align-center ma-6">
     <v-col cols="12" lg="3" sm="12">
       <v-img src="/public/assets/our-cafe-6.jpg" height="300" cover />

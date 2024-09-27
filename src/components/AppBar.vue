@@ -56,16 +56,7 @@ const links = [
       >
         {{ link.text }}
       </div>
-      <v-list-item
-        href="https://www.instagram.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="no-hover"
-      >
-        <v-icon>
-          mdi-instagram
-        </v-icon>
-      </v-list-item>
+      <v-btn icon="mdi-instagram" href="https://www.instagram.com" target="_blank" />
     </nav>
   </v-app-bar>
 
