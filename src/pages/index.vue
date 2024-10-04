@@ -46,6 +46,7 @@ import OurProducts from './ourProducts.vue'
   </v-card>
   <DescriptionView />
   <OurDelightsView />
+  <OurCafeExperience />
   <ContactView id="target-contact" />
 </template>
 

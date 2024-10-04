@@ -105,9 +105,11 @@ export const useAppStore = defineStore('app', {
         id: 4,
         name: 'Sandwiches',
         items: [
-          { id: 0, name: 'Cookie Box', price: 1, inStock: false, img: '/assets/products/gift-box-1.jpg', description: 'cookie box.' },
-          { id: 0, name: 'Bread Box', price: 1, inStock: false, img: '/assets/products/gift-box-2.jpg', description: 'cookie box.' },
+          { id: 0, name: 'Mushroom Grilled Cheese', price: 1, inStock: false, img: '/assets/products/sandwich-shorter.jpg', description: 'A golden, crispy grilled cheese sandwich layered with melted cheese and sautéed mushrooms.' },
+          { id: 1, name: 'Ham and Arugula Sourdough Sandwich', price: 1, inStock: false, img: '/assets/products/sandwich-2.jpg', description: 'Sourdough sandwich featuring smoked ham, arugula, and cheese for a delightful and savory flavor experience.' },
+          { id: 2, name: 'Veggie Sandwich', price: 1, inStock: false, img: '/assets/products/sandwich-3.jpg', description: 'A refreshing sandwich with crisp cucumber, avocado, red bell pepper, carrots, and fresh lettuce for a healthy bite.' },
         ],
+
         pageImg: '/assets/sandwich.jpg',
         slider: { avatar: '/assets/sandwich.jpg' },
         // src: '/assets/sandwich.jpg',
@@ -179,14 +181,3 @@ export const useAppStore = defineStore('app', {
 
   }),
 })
-// {
-//   id: 8,
-//   name: 'Our Cafe',
-//   items: [
-//     { id: 0, name: 'Cookie Box', price: 1, inStock: false, img: '/assets/products/gift-box-1.jpg', description: 'cookie box.' },
-//     { id: 0, name: 'Bread Box', price: 1, inStock: false, img: '/assets/products/gift-box-2.jpg', description: 'cookie box.' },
-//   ],
-//   pageImg: '/assets/cookies-box.jpg',
-//   slider: null,
-//   // src: '/assets/drinks.jpg',
-// },

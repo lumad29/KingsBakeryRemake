@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 
 // Declare reactive data using ref
-const icons = ref([
-  'mdi-instagram',
-])
+// const icons = ref([
+//   'mdi-instagram',
+// ])
 </script>
 
 <template>
@@ -13,11 +13,24 @@ const icons = ref([
   >
     <v-container class="bg-grey-custom rounded-lg font-weight-medium" fluid>
       <v-row no-gutters>
-        <v-col><p>link to our Products</p></v-col>
-        <v-col><p>link to stores</p></v-col>
         <v-col>
-          link to Instagram
-          <div>
+          <div class="my-2">
+            <router-link to="ourProducts" class="nav-link">
+              Products
+            </router-link>
+          </div>
+        </v-col>
+        <v-col>
+          <div class="my-2">
+            <router-link to="locations" class="nav-link">
+              Locations
+            </router-link>
+          </div>
+        </v-col>
+        <v-col>
+          <v-btn icon="mdi-instagram" href="https://www.instagram.com" target="_blank" color="transparent" elevation="0" />
+
+          <!-- <div>
             <v-btn
               v-for="icon in icons"
               :key="icon"
@@ -25,7 +38,7 @@ const icons = ref([
               class="mx-4"
               variant="text"
             />
-          </div>
+          </div> -->
         </v-col>
       </v-row>
     </v-container>

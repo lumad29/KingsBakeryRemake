@@ -9,7 +9,7 @@ const drawer = ref(false)
 const links = [
   { to: '', text: 'Home' },
   { to: 'locations', text: 'Locations' },
-  { to: 'ourProducts', text: 'Our Products' },
+  { to: 'ourProducts', text: 'Products' },
   { to: 'OurCafe', text: 'Our Cafe' },
   { to: 'about', text: 'About' },
   { to: '#target-contact', text: 'Contact' },

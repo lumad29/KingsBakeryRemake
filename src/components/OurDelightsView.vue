@@ -26,7 +26,7 @@ const delightsAndGifts = [
 <template>
   <div>
     <v-img src="/assets/our-delights.png" />
-    <div class="px-2">
+    <div class="px-3">
       <v-row>
         <v-col
           v-for="product in delightsAndGifts"
@@ -52,6 +52,7 @@ const delightsAndGifts = [
           </v-img>
         </v-col>
       </v-row>
+      <VisitOurCafe />
     </div>
   </div>
 </template>

@@ -7,27 +7,17 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AboutView: typeof import('./src/components/AboutViewx.vue')['default']
-    AboutViewx: typeof import('./src/components/AboutViewx.vue')['default']
-    AnimatedText: typeof import('./src/components/AnimatedText.vue')['default']
     AppBar: typeof import('./src/components/AppBar.vue')['default']
     ContactView: typeof import('./src/components/ContactView.vue')['default']
-    DelightsView: typeof import('./src/components/DelightsView.vue')['default']
     DescriptionView: typeof import('./src/components/DescriptionView.vue')['default']
     FooterView: typeof import('./src/components/FooterView.vue')['default']
-    HomeView: typeof import('./src/components/HomeView.vue')['default']
-    OtroComponente: typeof import('./src/components/OtroComponente.vue')['default']
+    OurCafeExperience: typeof import('./src/components/OurCafeExperience.vue')['default']
     OurDelightsView: typeof import('./src/components/OurDelightsView.vue')['default']
     ProductsSlide: typeof import('./src/components/ProductsSlide.vue')['default']
     ProductsSlideSlider: typeof import('./src/components/ProductsSlideSlider.vue')['default']
-    ProductsView: typeof import('./src/components/ProductsViewx.vue')['default']
-    ProductsViewx: typeof import('./src/components/ProductsViewx.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Stores: typeof import('./src/components/StoresViewx.vue')['default']
-    StoresView: typeof import('./src/components/StoresViewx.vue')['default']
-    StoresViewx: typeof import('./src/components/StoresViewx.vue')['default']
-    TargetAbout: typeof import('./src/components/TargetAbout.vue')['default']
+    VisitOurCafe: typeof import('./src/components/VisitOurCafe.vue')['default']
     WorkView: typeof import('./src/components/WorkView.vue')['default']
   }
 }
