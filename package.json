@@ -12,6 +12,7 @@
     "@mdi/font": "7.0.96",
     "@vueuse/motion": "^2.2.3",
     "core-js": "^3.34.0",
+    "firebase": "^10.14.0",
     "roboto-fontface": "*",
     "vue": "^3.3.0",
     "vuetify": "^3.0.0"

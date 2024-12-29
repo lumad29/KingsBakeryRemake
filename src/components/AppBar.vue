@@ -1,9 +1,14 @@
 <script setup>
 import { useGoTo } from 'vuetify'
+import { useAuthStore } from '@/store/auth'
 
 // :items="items"
 const drawer = ref(false)
+const authStore = useAuthStore()
 
+async function handleSignIn() {
+  await authStore.signIn()
+}
 // const router = useRouter()
 
 const links = [
@@ -31,7 +36,7 @@ const links = [
 </script>
 
 <template>
-  <v-app-bar :elevation="0" color="blue-grey-darken-3" height="80">
+  <v-app-bar :elevation="0" color="blue-grey-darken-3" height="100">
     <v-app-bar-title class="hidden-sm-and-downx my-font font-weight-bold">
       <router-link to="/" class="nav-link">
         <h2>King's Bakery</h2>
@@ -56,6 +61,9 @@ const links = [
       >
         {{ link.text }}
       </div>
+      <!-- <v-btn @click="handleSignIn()">
+        {{ authStore.isSignedIn ? `signOut ${authStore.user?.displayName}` : 'signIn' }}
+      </v-btn> -->
       <v-btn icon="mdi-instagram" href="https://www.instagram.com" target="_blank" />
     </nav>
   </v-app-bar>

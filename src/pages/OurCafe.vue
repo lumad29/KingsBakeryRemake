@@ -61,7 +61,7 @@ function goBack() {
             Welcome to our cozy café, where the smell of freshly baked pastries invites you to relax and enjoy the moment. Grab a warm pastry, and pair it with a perfectly brewed coffee. Whether you're meeting up with friends or taking a quiet break, every visit brings a little comfort and a taste of something special.
           </p>
         </div>
-        <v-btn variant="outlined" class="narrow-btn hover-white">
+        <v-btn variant="outlined" class="narrow-btn hover-white" @click="$router.push('/locations')">
           Locations
         </v-btn>
       </v-container>

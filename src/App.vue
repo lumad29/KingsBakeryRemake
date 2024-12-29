@@ -1,12 +1,19 @@
-<script setup></script>
+<script setup>
+import { getUserState } from '@/firebase'
+
+onMounted(async () => {
+  const isAuthenticated = await getUserState()
+  console.log(isAuthenticated)
+})
+</script>
 
 <template>
   <v-app>
     <AppBar />
     <v-main>
       <RouterView />
-      <FooterView />
     </v-main>
+    <FooterView />
   </v-app>
 </template>
 

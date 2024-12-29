@@ -21,11 +21,11 @@ import OurProducts from './ourProducts.vue'
 
 <template>
   <v-card
-    min-height="100"
     max-height="100vh"
     class="fill-height rounded-0 home-view text-white "
     color="transparent"
     flat
+    width="100%"
   >
     <v-row class="mt-16" align="start" justify="center">
       <v-col class="pa-8 ma-8" cols="12" md="8">
@@ -44,15 +44,16 @@ import OurProducts from './ourProducts.vue'
       </v-col>
     </v-row>
   </v-card>
+
   <DescriptionView />
   <OurDelightsView />
   <OurCafeExperience />
-  <ContactView id="target-contact" />
+  <!-- <ContactView id="target-contact" /> -->
 </template>
 
 <style scoped>
 .home-view {
-  /* height: 100vh; */
+  min-height: 100vh;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -81,6 +82,5 @@ font-weight: 500;
 }
 .main-title {
   font-size: 3rem;
-
 }
 </style>

@@ -169,9 +169,9 @@ export const useAppStore = defineStore('app', {
         id: 7,
         name: 'Our Joy Boxes',
         items: [
-          { id: 0, name: 'Cookie Box', price: 1, inStock: false, img: '/assets/products/gift-box-1.jpg', description: 'cookie box.' },
-          { id: 0, name: 'Bread Box', price: 1, inStock: false, img: '/assets/products/gift-box-2.jpg', description: 'cookie box.' },
-          { id: 0, name: 'Cake Box', price: 1, inStock: false, img: '/assets/products/gift-box-3.webp', description: 'cookie box.' },
+          { id: 0, name: 'Cookie Box', price: 1, inStock: false, img: '/assets/products/cookie-box-1.jpg', description: 'Sweet, crunchy, and gooey Cookies' },
+          { id: 0, name: 'Bread Box', price: 1, inStock: false, img: '/assets/products/gift-box-2.jpg', description: 'Treat others with our speciality' },
+          { id: 0, name: 'Cake Box', price: 1, inStock: false, img: '/assets/products/gift-box-3.webp', description: 'Choose your favorite kind of cake for a unique present' },
         ],
         pageImg: '/assets/cookies-box.jpg',
         slider: null,
