@@ -81,7 +81,7 @@ function goBack() {
           </p>
           <div class="py-5">
             <p style="font-size: 19px; font-weight: 300; line-height: 1.8;">
-              In 2015, their dream blossomed into a vibrant team of passionate, dedicated bakers who pour their hearts into every creation.
+              In 2015, their dream blossomed into a vibrant team of dedicated bakers who pour their hearts into every creation.
               Together, they’ve crafted more than just baked goods—they’ve built a community. With the opening of their first
               café and bakery, their journey came full circle, welcoming everyone to experience the warmth, love,
               and tradition baked into every bite. Now with over five locations across London, you’re never far from one of

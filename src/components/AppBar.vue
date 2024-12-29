@@ -17,7 +17,7 @@ const links = [
   { to: 'ourProducts', text: 'Products' },
   { to: 'OurCafe', text: 'Our Cafe' },
   { to: 'about', text: 'About' },
-  { to: '#target-contact', text: 'Contact' },
+  { to: 'contact', text: 'Contact' },
 ]
 
 // function toggleDrawer(linkTo) {
