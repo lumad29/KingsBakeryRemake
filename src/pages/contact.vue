@@ -26,7 +26,7 @@ function goBack() {
   </div>
 
   <!-- card -->
-  <v-card class="px-10 my-10">
+  <v-card class="px-10 my-10 text-white" color="transparent" elevation="0" dark>
     <v-form v-model="valid">
       <v-container>
         <v-row>
@@ -36,7 +36,6 @@ function goBack() {
           >
             <v-text-field
               v-model="firstname"
-              :counter="10"
               :rules="nameRules"
               label="First name"
               required
@@ -49,7 +48,6 @@ function goBack() {
           >
             <v-text-field
               v-model="lastname"
-              :counter="10"
               :rules="nameRules"
               label="Last name"
               required
