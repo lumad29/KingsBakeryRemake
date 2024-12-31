@@ -97,21 +97,6 @@ function goBack() {
       </div>
     </v-col>
   </v-row>
-
-  <v-row class="d-flex justify-center align-center ma-6">
-    <v-col cols="12" lg="3" sm="12">
-      <v-img src="/public/assets/croissant.jpg" height="300" cover />
-    </v-col>
-    <v-col cols="12" lg="3" sm="12">
-      <v-img src="/public/assets/baked-goods-1.jpg" height="300" cover />
-    </v-col>
-    <v-col cols="12" lg="3" sm="12">
-      <v-img src="/public/assets/our-cafe-11.jpg" height="300" cover />
-    </v-col>
-    <v-col cols="12" lg="3" sm="12">
-      <v-img src="/public/assets/our-cafe-9.jpg" height="300" cover />
-    </v-col>
-  </v-row>
 </template>
 
 <style>

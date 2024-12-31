@@ -67,8 +67,7 @@ const mapData = [
     class="d-flex flex-column text-white justify-center align-center text-center px-15 my-5"
   >
     <p style="font-size: 19px; font-weight: 300; line-height: 1.8;">
-      We’re a bakery focused on crafting fresh, handmade treats with the best ingredients.
-      Every bite is made with care to bring you something special, whether sweet or savory.
+      Find your nearest store and treat yourself—and others—to a delightful coffee and more!
     </p>
   </v-container>
 

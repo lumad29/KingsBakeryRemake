@@ -7,6 +7,19 @@ const { smAndDown } = useDisplay()
 function goBack() {
   router.go(-1)
 }
+
+const contact = ref(
+  {
+    firstname: '',
+    lastname: '',
+    email: '',
+    message: '',
+  },
+)
+
+function submitForm() {
+  console.log(contact.value)
+}
 </script>
 
 <template>
@@ -24,18 +37,19 @@ function goBack() {
       </div>
     </v-img>
   </div>
+  {{ contact }}
 
   <!-- card -->
   <v-card class="px-10 my-10 text-white" color="transparent" elevation="0" dark>
-    <v-form v-model="valid">
-      <v-container>
+    <v-form v-model="valid" @submit.prevent="submitForm">
+      <v-card-text>
         <v-row>
           <v-col
             cols="12"
             md="6"
           >
             <v-text-field
-              v-model="firstname"
+              v-model="contact.firstname"
               :rules="nameRules"
               label="First name"
               required
@@ -47,7 +61,7 @@ function goBack() {
             md="6"
           >
             <v-text-field
-              v-model="lastname"
+              v-model="contact.lastname"
               :rules="nameRules"
               label="Last name"
               required
@@ -59,7 +73,7 @@ function goBack() {
             md="12"
           >
             <v-text-field
-              v-model="email"
+              v-model="contact.email"
               :rules="emailRules"
               label="E-mail"
               required
@@ -71,14 +85,20 @@ function goBack() {
             md="12"
           >
             <v-text-field
-              v-model="message"
+              v-model="contact.message"
               :rules="emailRules"
               label="Message"
               required
             />
           </v-col>
         </v-row>
-      </v-container>
+
+        <v-card-actions>
+          <v-btn type="Submit">
+            Submit
+          </v-btn>
+        </v-card-actions>
+      </v-card-text>
     </v-form>
   </v-card>
 </template>

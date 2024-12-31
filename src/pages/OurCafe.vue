@@ -1,12 +1,16 @@
 <script setup>
 // this allows navigation
 import { useDisplay } from 'vuetify'
+import { ref } from 'vue'
 
 const router = useRouter()
 const { smAndDown } = useDisplay()
 function goBack() {
   router.go(-1)
 }
+const pictures = ref({
+  src: ['/public/assets/our-cafe-6.jpg', '/public/assets/our-cafe-7.jpg', '/public/assets/our-cafe-11.jpg', '/public/assets/our-cafe-9.jpg'],
+})
 </script>
 
 <template>
@@ -104,7 +108,7 @@ function goBack() {
     </v-col>
   </v-row>
 
-  <v-row class="d-flex justify-center align-center ma-6">
+  <!-- <v-row class="d-flex justify-center align-center ma-6">
     <v-col cols="12" lg="3" sm="12">
       <v-img src="/public/assets/our-cafe-6.jpg" height="300" cover />
     </v-col>
@@ -116,6 +120,16 @@ function goBack() {
     </v-col>
     <v-col cols="12" lg="3" sm="12">
       <v-img src="/public/assets/our-cafe-9.jpg" height="300" cover />
+    </v-col>
+  </v-row> -->
+
+  <v-row class="d-flex justify-center align-center ma-6">
+    <v-col
+      v-for="(picture, index) in pictures.src" :key="index" cols="12"
+      lg="3"
+      sm="12"
+    >
+      <v-img :src="picture" height="300" cover />
     </v-col>
   </v-row>
 </template>
